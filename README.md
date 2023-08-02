@@ -1,4 +1,4 @@
-# OnionArchitecture
+# Onion Architecture
 
 The Onion architecture is also commonly known as the “Clean architecture” or “Ports and adapters”.
 
