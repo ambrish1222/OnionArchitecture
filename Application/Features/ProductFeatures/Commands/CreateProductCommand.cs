@@ -24,17 +24,31 @@ namespace Application.Features.ProductFeatures.Commands
             {
                 _context = context;
             }
-            public async Task<int> Handle(CreateProductCommand command, CancellationToken cancellationToken)
+
+            public async Task<int> Handle(CreateProductCommand request, CancellationToken cancellationToken)
             {
+
                 var product = new Product();
-                product.Barcode = command.Barcode;
-                product.Name = command.Name;
-                product.Rate = command.Rate;
-                product.Description = command.Description;
+                product.Barcode = request.Barcode;
+                product.Barcode = request.Barcode;
+                product.Name = request.Name;
+                product.Rate = request.Rate;
+                product.Description = request.Description;
                 _context.Products.Add(product);
                 await _context.SaveChanges();
                 return product.Id;
             }
+            //public async Task<int> Handle(CreateProductCommand command, CancellationToken cancellationToken)
+            //{
+            //    var product = new Product();
+            //    product.Barcode = command.Barcode;
+            //    product.Name = command.Name;
+            //    product.Rate = command.Rate;
+            //    product.Description = command.Description;
+            //    _context.Products.Add(product);
+            //    await _context.SaveChanges();
+            //    return product.Id;
+            //}
         }
     }
 }
