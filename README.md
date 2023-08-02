@@ -21,3 +21,5 @@ Testability is very high with the Onion architecture because everything depends 
 
 We can write business logic without concern about any of the implementation details. If we need anything from an external system or service, we can just create an interface for it and consume it. We do not have to worry about how it will be implemented. The higher layers of the Onion will take care of implementing that interface transparently.
 
+#Source :https://codewithmukesh.com/blog/onion-architecture-in-aspnet-core
+        :https://code-maze.com/onion-architecture-in-aspnetcore/
